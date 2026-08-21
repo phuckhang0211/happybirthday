@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For My Girl</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Quicksand:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- hidden SVG filter used to give cards a hand-torn paper edge -->
+    <svg width="0" height="0" style="position: absolute">
+      <filter id="rough-edge" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence
+          type="fractalNoise"
+          baseFrequency="0.012 0.03"
+          numOctaves="2"
+          seed="7"
+          result="noise"
+        />
+        <feDisplacementMap
+          in="SourceGraphic"
+          in2="noise"
+          scale="9"
+          xChannelSelector="R"
+          yChannelSelector="G"
+        />
+      </filter>
+    </svg>
+
+    <div class="page">
+      <header class="notice">
+        <h1 class="notice__title">Một ngày đặc biệt dành cho người đặc biệt</h1>
+
+        <p class="notice__hint">Happy birthday my love.</p>
+      </header>
+
+      <main class="gallery">
+        <!-- CARD 1 — Birthday, vinyl player -->
+        <!-- CARD 1 — Birthday, vinyl player -->
+        <section class="card card--rose" style="--rot: -1.1deg">
+          <span class="tape tape--tl" aria-hidden="true"></span>
+          <span class="tape tape--br" aria-hidden="true"></span>
+
+          <div class="card__photos">
+            <button class="photo-slot photo-slot--main" data-slot type="button">
+              <img src="./imgs/thanhthu.png" alt="Ảnh chính" />
+            </button>
+
+            <button
+              class="photo-slot photo-slot--p1"
+              data-slot
+              type="button"
+              style="--tilt: 8deg"
+            >
+              <img src="./imgs/thanhthu1.png" alt="Ảnh 2" />
+            </button>
+
+            <button
+              class="photo-slot photo-slot--p2"
+              data-slot
+              type="button"
+              style="--tilt: -6deg"
+            >
+              <img src="./imgs/thanhthu4.png" alt="Ảnh 3" />
+            </button>
+
+            <p
+              class="card__caption"
+              contenteditable="true"
+              data-placeholder="Câu chúc của bạn ở đây"
+            >
+              Chúc em tuổi mới luôn vui vẻ, luôn xinh đẹp và luôn có anh bên
+              cạnh. ❤️
+            </p>
+          </div>
+
+          <div
+            class="card__calendar"
+            data-calendar
+            data-weekstart="0"
+            data-month="7"
+            data-year="2025"
+            data-highlight="24"
+          >
+            <p class="cal__eyebrow">Happy</p>
+            <h2 class="cal__script">Birthday</h2>
+
+            <p
+              class="cal__name"
+              contenteditable="true"
+              data-placeholder="Tên nhân vật chính"
+            >
+              Nguyễn Lâm Thanh Thư
+            </p>
+
+            <p
+              class="cal__date"
+              contenteditable="true"
+              data-placeholder="dd/mm"
+            >
+              24/08
+            </p>
+
+            <div class="cal__weekdays"></div>
+            <div class="cal__days"></div>
+
+            <div class="cal__player" aria-hidden="true">
+              <span class="cal__player-btn">⏮</span>
+              <span class="cal__vinyl">
+                <span class="cal__vinyl-hole"></span>
+              </span>
+              <span class="cal__player-btn">⏭</span>
+              <span class="cal__player-track">
+                <span class="cal__player-progress"></span>
+              </span>
+            </div>
+          </div>
+        </section>
+        <!-- <section class="card card--rose" style="--rot: -1.1deg">
+          <span class="tape tape--tl" aria-hidden="true"></span>
+          <span class="tape tape--br" aria-hidden="true"></span>
+
+          <div class="card__photos">
+            <button class="photo-slot photo-slot--main" data-slot type="button">
+              <span class="photo-slot__plus">＋</span>
+              <span class="photo-slot__label">Ảnh chính</span>
+            </button>
+            <button
+              class="photo-slot photo-slot--p1"
+              data-slot
+              type="button"
+              style="--tilt: 8deg"
+            >
+              <span class="photo-slot__plus">＋</span>
+              <span class="photo-slot__label">Ảnh 2</span>
+            </button>
+            <button
+              class="photo-slot photo-slot--p2"
+              data-slot
+              type="button"
+              style="--tilt: -6deg"
+            >
+              <span class="photo-slot__plus">＋</span>
+              <span class="photo-slot__label">Ảnh 3</span>
+            </button>
+            <button
+              class="photo-slot photo-slot--p3"
+              data-slot
+              type="button"
+              style="--tilt: 4deg"
+            >
+              <span class="photo-slot__plus">＋</span>
+              <span class="photo-slot__label">Ảnh 4</span>
+            </button>
+            <p
+              class="card__caption"
+              contenteditable="true"
+              data-placeholder="Câu chúc của bạn ở đây"
+            >
+              Yêu thương mỗi ngày, ở bên nhau mỗi khoảnh khắc
+            </p>
+          </div>
+
+          <div
+            class="card__calendar"
+            data-calendar
+            data-weekstart="0"
+            data-month="7"
+            data-year="2025"
+            data-highlight="24"
+          >
+            <p class="cal__eyebrow">Happy</p>
+            <h2 class="cal__script">Birthday</h2>
+            <p
+              class="cal__name"
+              contenteditable="true"
+              data-placeholder="Tên nhân vật chính"
+            >
+              Nguyễn Lâm Thanh Thư
+            </p>
+            <p
+              class="cal__date"
+              contenteditable="true"
+              data-placeholder="dd/mm"
+            >
+              24/08
+            </p>
+            <div class="cal__weekdays"></div>
+            <div class="cal__days"></div>
+            <div class="cal__player" aria-hidden="true">
+              <span class="cal__player-btn">⏮</span>
+              <span class="cal__vinyl"
+                ><span class="cal__vinyl-hole"></span
+              ></span>
+              <span class="cal__player-btn">⏭</span>
+              <span class="cal__player-track"
+                ><span class="cal__player-progress"></span
+              ></span>
+            </div>
+          </div>
+        </section> -->
+
+        <!-- CARD 2 — Wedding -->
+        <section class="card card--blush" style="--rot: 0.8deg">
+          <span class="tape tape--tl" aria-hidden="true"></span>
+          <span class="tape tape--br" aria-hidden="true"></span>
+
+          <div class="card__photos card__photos--wedding">
+            <button
+              class="photo-slot photo-slot--wideMain"
+              data-slot
+              type="button"
+            >
+              <span class="photo-slot__plus">＋</span>
+              <span class="photo-slot__label">Ảnh cưới chính</span>
+            </button>
+            <button
+              class="photo-slot photo-slot--wideSub"
+              data-slot
+              type="button"
+              style="--tilt: -3deg"
+            >
+              <span class="photo-slot__plus">＋</span>
+              <span class="photo-slot__label">Ảnh cưới phụ</span>
+            </button>
+            <p
+              class="card__caption card__caption--script"
+              contenteditable="true"
+              data-placeholder="Lời chúc cho cô dâu chú rể"
+            >
+              Best wish for you
+            </p>
+          </div>
+
+          <div
+            class="card__calendar"
+            data-calendar
+            data-weekstart="1"
+            data-month="1"
+            data-year="2025"
+            data-highlight="15"
+          >
+            <p class="cal__eyebrow">Happy</p>
+            <h2 class="cal__script">Wedding Day</h2>
+            <p
+              class="cal__name cal__name--couple"
+              contenteditable="true"
+              data-placeholder="Tên cô dâu ♥ chú rể"
+            >
+              Ngọc Trâm ♥ Dương Quốc
+            </p>
+            <p
+              class="cal__date"
+              contenteditable="true"
+              data-placeholder="dd/mm/yyyy"
+            >
+              15/01/2025
+            </p>
+            <div class="cal__weekdays"></div>
+            <div class="cal__days"></div>
+          </div>
+        </section>
+
+        <!-- CARD 3 — Birthday, star mascot -->
+        <section class="card card--sun" style="--rot: -0.6deg">
+          <span class="tape tape--tl" aria-hidden="true"></span>
+          <span class="tape tape--br" aria-hidden="true"></span>
+
+          <div class="card__photos">
+            <button class="photo-slot photo-slot--main" data-slot type="button">
+              <span class="photo-slot__plus">＋</span>
+              <span class="photo-slot__label">Ảnh chính</span>
+            </button>
+            <button
+              class="photo-slot photo-slot--p1"
+              data-slot
+              type="button"
+              style="--tilt: -5deg"
+            >
+              <span class="photo-slot__plus">＋</span>
+              <span class="photo-slot__label">Ảnh 2</span>
+            </button>
+            <p
+              class="card__caption"
+              contenteditable="true"
+              data-placeholder="Câu chúc của bạn ở đây"
+            >
+              Hi vọng trong mắt cậu đều là ánh sáng, trong nụ cười là thẳng thắn
+              vô tư…
+            </p>
+          </div>
+
+          <div
+            class="card__calendar"
+            data-calendar
+            data-weekstart="0"
+            data-month="5"
+            data-year="2001"
+            data-highlight="18"
+          >
+            <p class="cal__eyebrow">Happy</p>
+            <h2 class="cal__script">Birthday</h2>
+            <p
+              class="cal__name"
+              contenteditable="true"
+              data-placeholder="Tên nhân vật chính"
+            >
+              Xuân Yến
+            </p>
+            <p
+              class="cal__date"
+              contenteditable="true"
+              data-placeholder="dd-mm-yyyy"
+            >
+              18-05-2001
+            </p>
+            <div class="cal__weekdays"></div>
+            <div class="cal__days"></div>
+            <div class="cal__mascot" aria-hidden="true">★</div>
+          </div>
+        </section>
+
+        <!-- CARD 4 — Birthday, floral + vinyl -->
+        <section class="card card--bloom" style="--rot: 1deg">
+          <span class="tape tape--tl" aria-hidden="true"></span>
+          <span class="tape tape--br" aria-hidden="true"></span>
+
+          <div class="card__photos card__photos--single">
+            <button class="photo-slot photo-slot--tall" data-slot type="button">
+              <span class="photo-slot__plus">＋</span>
+              <span class="photo-slot__label">Ảnh chính</span>
+            </button>
+            <p
+              class="card__caption"
+              contenteditable="true"
+              data-placeholder="Câu chúc của bạn ở đây"
+            >
+              Chúc anh chân cứng đá mềm, đường xa không mỏi, đường đời có em
+            </p>
+          </div>
+
+          <div
+            class="card__calendar"
+            data-calendar
+            data-weekstart="0"
+            data-month="5"
+            data-year="2025"
+            data-highlight="24"
+          >
+            <p class="cal__eyebrow">Happy</p>
+            <h2 class="cal__script">Birthday</h2>
+            <p
+              class="cal__name"
+              contenteditable="true"
+              data-placeholder="Tên nhân vật chính"
+            >
+              Đăng Khoa
+            </p>
+            <p
+              class="cal__date"
+              contenteditable="true"
+              data-placeholder="dd/mm"
+            >
+              24/05
+            </p>
+            <div class="cal__weekdays"></div>
+            <div class="cal__days"></div>
+            <div class="cal__player" aria-hidden="true">
+              <span class="cal__player-btn">⏮</span>
+              <span class="cal__vinyl"
+                ><span class="cal__vinyl-hole"></span
+              ></span>
+              <span class="cal__player-btn">⏭</span>
+              <span class="cal__player-track"
+                ><span class="cal__player-progress"></span
+              ></span>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <section class="cta">
+        <h2 class="cta__title">Chưa thấy mẫu ưng ý?</h2>
+        <p class="cta__body">
+          Gửi yêu cầu của bạn — shop sẽ lên thiết kế riêng, không tính thêm phí
+          phác thảo.
+        </p>
+        <button class="btn" id="openRequestBtn" type="button">
+          Gửi yêu cầu thiết kế
+        </button>
+      </section>
+
+      <footer class="footer">
+        <p>
+          Thiết kế mẫu — mọi hình ảnh trong khung là chỗ trống để bạn tự chèn
+          ảnh.
+        </p>
+      </footer>
+    </div>
+
+    <!-- Request modal -->
+    <div class="modal" id="requestModal" hidden>
+      <div class="modal__backdrop" data-close></div>
+      <div
+        class="modal__box"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+      >
+        <button
+          class="modal__close"
+          id="closeRequestBtn"
+          type="button"
+          aria-label="Đóng"
+        >
+          ×
+        </button>
+        <h3 id="modalTitle">Yêu cầu thiết kế riêng</h3>
+        <p class="modal__sub">
+          Kể cho shop biết bạn muốn gì, shop sẽ phản hồi sớm nhất.
+        </p>
+        <form id="requestForm">
+          <label
+            >Họ tên
+            <input
+              type="text"
+              name="name"
+              required
+              placeholder="Nguyễn Văn A"
+            />
+          </label>
+          <label
+            >Số điện thoại / Zalo
+            <input
+              type="tel"
+              name="phone"
+              required
+              placeholder="09xx xxx xxx"
+            />
+          </label>
+          <label
+            >Mô tả yêu cầu
+            <textarea
+              name="detail"
+              rows="4"
+              placeholder="Ví dụ: đổi tông màu xanh, thêm hoa, chữ tiếng Anh..."
+            ></textarea>
+          </label>
+          <button type="submit" class="btn btn--block">Gửi yêu cầu</button>
+        </form>
+        <p class="modal__success" id="modalSuccess" hidden>
+          Đã gửi! Shop sẽ liên hệ lại sớm nhất 🌸
+        </p>
+      </div>
+    </div>
+
+    <input type="file" id="fileInput" accept="image/*" hidden />
+
+    <script src="script.js"></script>
+  </body>
+</html>
