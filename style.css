@@ -320,6 +320,18 @@ body {
   height: 88%;
 }
 
+.photo-slot {
+  overflow: hidden;
+}
+
+.photo-slot video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
 .card__caption {
   position: absolute;
   bottom: -4px;
