@@ -385,5 +385,16 @@
     <input type="file" id="fileInput" accept="image/*" hidden />
 
     <script src="script.js"></script>
+    <audio id="bgMusic" loop>
+    <source src="./music/nhac1_short.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        const music = document.getElementById("bgMusic");
+
+        document.addEventListener("click", () => {
+            music.play();
+        }, { once: true });
+    </script>
   </body>
 </html>
